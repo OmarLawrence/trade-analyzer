@@ -1,0 +1,168 @@
+[2026/11/14 12:04:01,97] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T10:04:15.143Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T10:04:22.696Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 12:04:24,95] Finished 
+[2026/11/14 12:34:00,94] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T10:34:03.576Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T10:34:10.343Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 12:34:12,56] Finished 
+[2026/11/14 13:04:00,92] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T11:04:03.591Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T11:04:11.211Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 13:04:12,40] Finished 
+[2026/11/14 13:34:00,97] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T11:34:03.640Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T11:34:11.356Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 13:34:13,55] Finished 
+[2026/11/14 14:04:00,98] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T12:04:03.612Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T12:04:12.241Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 14:04:13,27] Finished 
+[2026/11/14 14:34:00,96] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T12:34:03.635Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T12:34:09.836Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 14:34:11,51] Finished 
+[2026/11/14 15:04:00,97] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T13:04:03.649Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T13:04:12.058Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 15:04:13,09] Finished 
+[2026/11/14 15:34:00,98] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T13:34:03.682Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T13:34:10.438Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 15:34:12,65] Finished 
+[2026/11/14 16:04:00,99] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T14:04:03.659Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T14:04:10.762Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 16:04:11,80] Finished 
+[2026/11/14 20:34:01,82] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T18:34:04.886Z] Starting RSS news ingestion...
+Ingestion complete. Saved 0 new articles to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T18:34:11.605Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 20:34:12,72] Finished 
+[2026/11/14 21:04:00,82] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T19:04:03.539Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T19:04:10.918Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 21:04:11,87] Finished 
+[2026/11/14 21:34:00,87] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T19:34:03.964Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T19:34:11.099Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 21:34:12,12] Finished 
