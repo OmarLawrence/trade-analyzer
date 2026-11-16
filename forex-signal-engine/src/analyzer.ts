@@ -53,13 +53,73 @@ function writeSignalsForMetaTrader(signals: Signal[]) {
   }
 }
 
-// Retry on temporary Google-side errors (503 overloaded, 429 rate limit, 500)
+// ---- Free-tier protection -------------------------------------------------
+// The free tier allows only a small number of requests per day per model
+// (20/day for gemini-3.8-flash at the time of writing; check ai.dev/rate-limit).
+// These guards keep the scheduled task from burning the whole day's quota early.
+const DAILY_LIMIT = Number(process.env.GEMINI_DAILY_LIMIT ?? 18);
+const MIN_INTERVAL_MIN = Number(process.env.GEMINI_MIN_INTERVAL_MIN ?? 90);
+const USAGE_DOC = db.collection('system').doc('gemini_usage');
+
+class BudgetExhausted extends Error {}
+
+interface Usage {
+  day: string;
+  model: string;
+  count: number;
+  lastCallAt: number;
+}
+
+// Google's daily quota resets at midnight Pacific time
+function pacificDay(): string {
+  return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' });
+}
+
+async function readUsage(): Promise<Usage> {
+  const d = (await USAGE_DOC.get()).data() as Partial<Usage> | undefined;
+  const day = pacificDay();
+  const lastCallAt = d?.model === MODEL ? d.lastCallAt ?? 0 : 0;
+  if (!d || d.day !== day || d.model !== MODEL) return { day, model: MODEL, count: 0, lastCallAt };
+  return { day, model: MODEL, count: d.count ?? 0, lastCallAt };
+}
+
+// Checked before any other work, so skipped runs cost almost nothing
+async function geminiAllowed(): Promise<boolean> {
+  const u = await readUsage();
+  if (u.count >= DAILY_LIMIT) {
+    console.log(`Daily Gemini budget used (${u.count}/${DAILY_LIMIT} for ${MODEL}). Skipping until the quota resets (midnight Pacific).`);
+    return false;
+  }
+  const sinceMin = (Date.now() - u.lastCallAt) / 60000;
+  if (sinceMin < MIN_INTERVAL_MIN) {
+    console.log(`Last Gemini call was ${sinceMin.toFixed(0)} min ago (minimum ${MIN_INTERVAL_MIN}). Skipping this run.`);
+    return false;
+  }
+  return true;
+}
+
+// Counts one request. Every attempt counts, including retries.
+async function reserveRequest(): Promise<void> {
+  const u = await readUsage();
+  if (u.count >= DAILY_LIMIT) {
+    throw new BudgetExhausted(`Daily Gemini budget reached (${u.count}/${DAILY_LIMIT}). Stopping.`);
+  }
+  await USAGE_DOC.set({ day: u.day, model: MODEL, count: u.count + 1, lastCallAt: Date.now() });
+}
+
+// Retry on temporary Google-side errors (503 overloaded, 500, short-term 429 rate limit).
+// A DAILY quota 429 is not retried, because retrying only wastes requests.
 async function withRetry<T>(fn: () => Promise<T>, maxAttempts = 5): Promise<T> {
   for (let attempt = 1; ; attempt++) {
     try {
       return await fn();
     } catch (err: any) {
       const status = err?.status ?? err?.code;
+      const dailyQuota = status === 429 && /PerDay|per day/i.test(String(err?.message ?? ''));
+      if (dailyQuota) {
+        console.error('Gemini daily quota exhausted for this model. Not retrying.');
+        throw err;
+      }
       const retryable = status === 503 || status === 429 || status === 500;
       if (!retryable || attempt >= maxAttempts) throw err;
       const waitSec = Math.min(2 ** attempt, 30); // 2s, 4s, 8s, 16s...
@@ -72,6 +132,8 @@ async function withRetry<T>(fn: () => Promise<T>, maxAttempts = 5): Promise<T> {
 async function analyzeNewsAndGenerateSignals() {
   const runStart = Date.now();
   console.log(`[${new Date().toISOString()}] Running AI market analysis...`);
+
+  if (!(await geminiAllowed())) return;
 
   // 1. Fetch unprocessed news from Firestore
   const snapshot = await db
@@ -108,7 +170,7 @@ Return exactly one entry for EACH of the 5 assets: EURUSD, GBPUSD, USDJPY, XAUUS
 
   // 2. Ask Gemini for structured JSON
   const geminiStart = Date.now();
-  const response = await withRetry(() => ai.models.generateContent({
+  const response = await withRetry(async () => { await reserveRequest(); return ai.models.generateContent({
     model: MODEL,
     contents: prompt,
     config: {
@@ -138,7 +200,7 @@ Return exactly one entry for EACH of the 5 assets: EURUSD, GBPUSD, USDJPY, XAUUS
         },
       },
     },
-  }));
+  }); });
 
   console.log(`Gemini responded in ${((Date.now() - geminiStart) / 1000).toFixed(1)}s`);
 
@@ -207,6 +269,10 @@ Return exactly one entry for EACH of the 5 assets: EURUSD, GBPUSD, USDJPY, XAUUS
 analyzeNewsAndGenerateSignals()
   .then(() => process.exit(0))
   .catch((err) => {
+    if (err instanceof BudgetExhausted) {
+      console.log(err.message);
+      process.exit(0);
+    }
     console.error('Error during AI analysis:', err);
     process.exit(1);
   });

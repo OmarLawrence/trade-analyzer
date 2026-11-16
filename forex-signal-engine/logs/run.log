@@ -166,3 +166,1570 @@ Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), sav
 [2026-11-14T19:34:11.099Z] Running AI market analysis...
 No new articles to process.
 [2026/11/14 21:34:12,12] Finished 
+[2026/11/14 22:04:01,04] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T20:04:04.738Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T20:04:11.298Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 22:04:13,57] Finished 
+[2026/11/14 22:34:00,97] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-14T20:34:03.932Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-14T20:34:11.521Z] Running AI market analysis...
+No new articles to process.
+[2026/11/14 22:34:12,45] Finished 
+[2026/11/15 23:34:01,80] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-15T21:34:05.093Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-15T21:34:13.521Z] Running AI market analysis...
+No new articles to process.
+[2026/11/15 23:34:15,67] Finished 
+[2026/11/16  0:04:00,79] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-15T22:04:04.115Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-15T22:04:11.259Z] Running AI market analysis...
+No new articles to process.
+[2026/11/16  0:04:13,40] Finished 
+[2026/11/16  0:34:00,76] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-15T22:34:04.173Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-15T22:34:11.423Z] Running AI market analysis...
+No new articles to process.
+[2026/11/16  0:34:12,44] Finished 
+[2026/11/16  1:04:00,80] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-15T23:04:04.139Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-15T23:04:12.228Z] Running AI market analysis...
+No new articles to process.
+[2026/11/16  1:04:13,21] Finished 
+[2026/11/16  1:34:00,79] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-15T23:34:04.279Z] Starting RSS news ingestion...
+Ingestion complete. 20 relevant articles found (12 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-15T23:34:11.002Z] Running AI market analysis...
+Gemini responded in 293.9s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Hawkish Federal Reserve rhetoric bolsters the US Dollar, putting downward pressure on EURUSD.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Firm US Dollar momentum underpinned by a hawkish Fed outlook weighs on the British Pound.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "A hawkish Fed stance widens interest rate differentials in favor of the US Dollar over the Japanese Yen.",
+    "suggestedAction": "BUY ON DIP"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 68,
+    "summaryCatalyst": "Expectations of tighter Fed policy and higher yields diminish the attractiveness of non-yielding bullion.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "USD strength led by hawkish Fed policy combined with soft commodity-currency sentiment lifts USDCAD.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 296.7s
+[2026/11/16  1:39:07,75] Finished 
+[2026/11/16  2:04:00,78] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T00:04:04.162Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (12 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T00:04:11.000Z] Running AI market analysis...
+No new articles to process.
+[2026/11/16  2:04:11,94] Finished 
+[2026/11/16  2:34:00,84] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T00:34:04.417Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (12 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T00:34:11.397Z] Running AI market analysis...
+No new articles to process.
+[2026/11/16  2:34:13,75] Finished 
+[2026/11/16  3:04:00,78] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T01:04:04.333Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (13 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T01:04:12.324Z] Running AI market analysis...
+Gemini responded in 138.4s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "The Euro has softened below the 1.1050 level as traders ramp up bets on further Federal Reserve interest rate hikes.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst provided for GBPUSD in the current news headlines.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst provided for USDJPY in the current news headlines.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst provided for XAUUSD in the current news headlines.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst provided for USDCAD in the current news headlines.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 139.8s
+[2026/11/16  3:06:32,15] Finished 
+[2026/11/16  3:34:00,85] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T01:34:04.366Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (13 via dollar/Fed keywords), saved 3 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T01:34:11.903Z] Running AI market analysis...
+Gemini responded in 122.6s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 72,
+    "summaryCatalyst": "Hawkish comments from Fed official Schmid emphasizing high inflation bolster the US Dollar across majors. This limits upside potential for EURUSD amid diverging rate path expectations.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "The British Pound remains pressured toward key multi-week lows around 1.3200 due to persistent US Dollar strength. Hawkish Federal Reserve commentary further fuels downside momentum.",
+    "suggestedAction": "SELL BREAKDOWN"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BEARISH",
+    "confidenceScore": 68,
+    "summaryCatalyst": "Heightened Japanese intervention warnings have countered weaker domestic GDP data, driving Yen appreciation. This downside pressure offsets broader US Dollar gains on hawkish Fed rhetoric.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "Fed rhetoric highlighting persistent inflation elevates yields and reinforces higher-for-longer rate sentiment. This reduces demand for non-yielding Gold in the near term.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Broad US Dollar strength driven by hawkish Federal Reserve inflation remarks lifts the pair. Sustained greenback demand underpins an upward trajectory against the Canadian Dollar.",
+    "suggestedAction": "BUY ON DIPS"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 3 articles as processed.
+Total run time: 125.1s
+[2026/11/16  3:36:17,01] Finished 
+[2026/11/16  4:04:00,81] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T02:04:04.294Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (12 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T02:04:11.306Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+Gemini responded in 80.5s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 60,
+    "summaryCatalyst": "Fed rate hike bets and Collins' support for gradual tightening maintain upward momentum for the US Dollar against the Euro.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 60,
+    "summaryCatalyst": "A resilient US Dollar backed by ongoing Federal Reserve rate hike speculation continues to pressure Sterling.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Expectations of continued Federal Reserve rate hikes bolster US Treasury yields, widening the rate differential against the Yen.",
+    "suggestedAction": "BUY ON DIP"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Elevated Fed rate hike expectations strengthen the greenback and increase opportunity costs for non-yielding gold.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 78,
+    "summaryCatalyst": "The Canadian Dollar is facing dual downward pressure from falling crude oil prices and robust US Dollar strength fueled by Fed rate hike bets.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 82.8s
+[2026/11/16  4:05:34,17] Finished 
+[2026/11/16  4:34:00,85] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T02:34:04.330Z] Starting RSS news ingestion...
+Ingestion complete. 14 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T02:34:11.559Z] Running AI market analysis...
+No new articles to process.
+[2026/11/16  4:34:13,70] Finished 
+[2026/11/16  5:04:00,83] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T03:04:04.234Z] Starting RSS news ingestion...
+Ingestion complete. 13 relevant articles found (10 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T03:04:11.485Z] Running AI market analysis...
+Gemini responded in 204.2s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Hawkish Federal Reserve commentary has bolstered the US Dollar Index above 103.50, exerting downward pressure on the Euro.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "The US Dollar maintains firm momentum following hawkish rhetoric from Fed officials, weighing heavily on the British Pound.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Widening rate differential expectations driven by hawkish Fed remarks are sustaining strong upward momentum in USDJPY.",
+    "suggestedAction": "BUY ON DIP"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "A firmer US Dollar and lingering expectations of restrictive Fed monetary policy limit upside for non-yielding bullion.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 72,
+    "summaryCatalyst": "Broad-based US Dollar resilience supported by hawkish Fed guidance provides steady bullish traction against the Canadian Dollar.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 206.9s
+[2026/11/16  5:07:38,40] Finished 
+[2026/11/16  5:34:00,87] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T03:34:04.269Z] Starting RSS news ingestion...
+Ingestion complete. 14 relevant articles found (11 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T03:34:11.656Z] Running AI market analysis...
+Gemini responded in 200.0s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Hawkish Federal Reserve sentiment is bolstering the US Dollar across G10 currencies. This sustains downward pressure on EURUSD as rate differentials favor the greenback.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Broad-based US Dollar strength fueled by hawkish Fed expectations weighs on the British Pound. The macroeconomic backdrop favors greenback resilience against Sterling.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "Persistent hawkish Fed rhetoric widens US-Japan sovereign yield spreads, providing upside momentum for USDJPY. Higher US Treasury yields continue to support the pair.",
+    "suggestedAction": "BUY ON DIPS"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Precious metals face heavy liquidations alongside silver as hawkish Fed policy expectations raise real yields and dampen non-yielding bullion appeal. Strong USD headwind accelerates downward momentum in Gold.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Rising US yields and firm Fed rate projections provide a tailwind for the US Dollar against the Canadian Dollar. Broad USD demand keeps USDCAD elevated.",
+    "suggestedAction": "BUY ON DIPS"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 203.9s
+[2026/11/16  5:37:35,56] Finished 
+[2026/11/16  6:04:00,85] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T04:04:04.464Z] Starting RSS news ingestion...
+Ingestion complete. 14 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T04:04:11.146Z] Running AI market analysis...
+No new articles to process.
+[2026/11/16  6:04:13,34] Finished 
+[2026/11/16  6:34:00,89] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T04:34:04.380Z] Starting RSS news ingestion...
+Ingestion complete. 14 relevant articles found (11 via dollar/Fed keywords), saved 3 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T04:34:11.825Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+Gemini error 503 (attempt 2/5). Retrying in 4s...
+Gemini error 503 (attempt 3/5). Retrying in 8s...
+Gemini error 503 (attempt 4/5). Retrying in 16s...
+Gemini responded in 244.4s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "EUR/USD remains pressured near year-to-date lows heading toward 1.1000 as the US Dollar continues to strengthen on hawkish Federal Reserve expectations.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 25,
+    "summaryCatalyst": "There is no clear catalyst directly addressing GBP/USD dynamics in the provided news.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 25,
+    "summaryCatalyst": "There is no clear catalyst directly addressing USD/JPY dynamics in the provided news.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Gold hovers near its year-to-date lows as rising Federal Reserve rate hike bets and persistent US Dollar strength offset geopolitical safe-haven bids.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 25,
+    "summaryCatalyst": "There is no clear catalyst directly addressing USD/CAD dynamics in the provided news.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 3 articles as processed.
+Total run time: 247.5s
+[2026/11/16  6:38:19,39] Finished 
+[2026/11/16  7:04:00,88] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T05:04:04.368Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (10 via dollar/Fed keywords), saved 3 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T05:04:11.742Z] Running AI market analysis...
+Gemini responded in 270.9s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst for EURUSD as recent headlines focus solely on the EUR/JPY cross pair without USD context.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst for GBPUSD from recent financial news headlines.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst for USDJPY as recent market commentary pertains exclusively to EUR/JPY technical levels.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Gold is consolidating ahead of a forecasted next leg down, supported by downward pressure and falling gold prices reported in India.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst for USDCAD in the recent news flow.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 3 articles as processed.
+Total run time: 273.7s
+[2026/11/16  7:08:45,49] Finished 
+[2026/11/16  7:34:00,90] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T05:34:04.515Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (11 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T05:34:11.389Z] Running AI market analysis...
+Gemini responded in 818.4s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Broad US Dollar strength driven by rising hawkish Federal Reserve expectations places downward pressure on the Euro. Sustained USD demand limits upside momentum for EURUSD.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "The British Pound faces headwinds against a firming greenback buoyed by hawkish Fed interest rate odds. Fading market expectations for near-term Fed rate cuts keep GBPUSD tilted lower.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "Widening interest rate differential expectations between a hawkish Fed and the Bank of Japan support USDJPY upside. Heightened odds of higher-for-longer US rates drive sustained capital flows into the greenback.",
+    "suggestedAction": "BUY ON DIP"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 68,
+    "summaryCatalyst": "Non-yielding Gold faces downside pressure from elevated US Dollar valuation and resilient US Treasury yields driven by hawkish Fed odds. Diminished prospects of imminent rate cuts reduce gold's near-term attractiveness.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "The US Dollar's broad advance on repriced Fed policy expectations supports USDCAD higher. Divergence in monetary policy expectations favors USD strength over the Canadian Dollar.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 820.0s
+[2026/11/16  7:47:51,47] Finished 
+[2026/11/16  8:04:00,89] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T06:04:04.520Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (11 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T06:04:11.352Z] Running AI market analysis...
+Gemini responded in 249.0s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Rising Federal Reserve rate hike expectations strengthen the US Dollar across the board, exerting sustained downward pressure on the Euro.",
+    "suggestedAction": "SELL ON PULLBACK"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "The British Pound is slumping toward 1.3200 as renewed bets on Fed tightening drive broad-based US Dollar demand.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 78,
+    "summaryCatalyst": "Elevated expectations of Fed rate hikes widen US-Japan yield differentials, offering solid upside momentum for the pair.",
+    "suggestedAction": "BUY ON DIPS"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Increasing bets on higher Fed interest rates bolster the greenback and elevate yields, dampening investor appetite for non-yielding Gold.",
+    "suggestedAction": "FADE RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 72,
+    "summaryCatalyst": "Aggressive Fed policy expectations reinforce US Dollar supremacy against risk-sensitive and commodity-correlated currencies such as the Canadian Dollar.",
+    "suggestedAction": "BUY ON DIPS"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 251.9s
+[2026/11/16  8:08:23,33] Finished 
+[2026/11/16  8:34:00,98] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T06:34:04.736Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (11 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T06:34:12.214Z] Running AI market analysis...
+No new articles to process.
+[2026/11/16  8:34:13,20] Finished 
+[2026/11/16  9:04:01,04] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T07:04:04.569Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (12 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T07:04:11.837Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+^C^C[2026/11/16  9:34:01,11] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T07:34:04.803Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (10 via dollar/Fed keywords), saved 3 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T07:34:12.579Z] Running AI market analysis...
+Gemini responded in 435.8s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 60,
+    "summaryCatalyst": "A firm US Dollar supported by cautious market sentiment to begin the week keeps downward pressure on EURUSD.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 60,
+    "summaryCatalyst": "General US Dollar strength and risk-off market conditions present headwinds for the British Pound.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Weak Japanese GDP figures have muted Yen bullishness despite BoJ hike prospects, allowing a steady US Dollar to push the pair higher.",
+    "suggestedAction": "BUY ON DIPS"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 55,
+    "summaryCatalyst": "Headwinds from a resilient US Dollar outweigh safe-haven inflows driven by broader market caution.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 60,
+    "summaryCatalyst": "Broad-based US Dollar strength amidst cautious early-week trading sentiment is driving bullish momentum for USDCAD.",
+    "suggestedAction": "BUY ON DIPS"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 3 articles as processed.
+Total run time: 437.6s
+[2026/11/16  9:41:30,22] Finished 
+[2026/11/16 10:04:01,14] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T08:04:04.515Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (10 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T08:04:12.212Z] Running AI market analysis...
+Gemini responded in 583.9s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "Danske Bank maintains an intact bearish outlook for the Euro against the US Dollar.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst or specific fundamental driver provided in the recent news.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst or specific fundamental driver provided in the recent news.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst or specific fundamental driver provided in the recent news.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst or specific fundamental driver provided in the recent news.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 587.9s
+[2026/11/16 10:14:00,16] Finished 
+[2026/11/16 10:34:00,18] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T08:34:03.681Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (11 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T08:34:11.355Z] Running AI market analysis...
+Gemini responded in 525.6s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Federal Reserve hawkishness is boosting the US Dollar, putting downside pressure on the Euro toward the 1.1000 handle.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Broad US Dollar strength continues to weigh on the Pound, though analyst projections suggest downside momentum will be limited below 1.3200.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst directly addressing USDJPY in the provided news.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst directly addressing XAUUSD in the provided news.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst directly addressing USDCAD in the provided news.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 529.3s
+[2026/11/16 10:43:00,72] Finished 
+[2026/11/16 11:04:00,22] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T09:04:03.597Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (9 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T09:04:11.056Z] Running AI market analysis...
+Gemini responded in 204.9s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 45,
+    "summaryCatalyst": "The Euro exhibits weakness with bears reclaiming control in EUR/GBP cross-rates, suggesting underlying downward pressure on the Euro.",
+    "suggestedAction": "SELL ON RALLIES"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 50,
+    "summaryCatalyst": "Sterling fell to a two-week low pressured by JPY cross-selling, although market commentary notes that further downside may be limited.",
+    "suggestedAction": "SELL ON RALLIES"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BEARISH",
+    "confidenceScore": 72,
+    "summaryCatalyst": "Mounting currency intervention fears have boosted the Japanese Yen, triggering strong downside pressure against the US Dollar.",
+    "suggestedAction": "SELL ON RALLIES"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "No clear catalyst from recent news headlines regarding Gold.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "No clear catalyst from recent news headlines regarding the Canadian Dollar.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 208.6s
+[2026/11/16 11:07:39,70] Finished 
+[2026/11/16 11:34:00,25] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T09:34:03.811Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (11 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T09:34:10.575Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+Gemini responded in 217.6s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear direct fundamental catalyst from the recent headlines for the euro. Overall market direction remains muted in the absence of specific European macroeconomic news.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "Recent news flow provides no clear catalyst for the British pound. Sentiment remains indeterminate with lacking UK macro inputs.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "No clear catalyst is present in the headlines to dictate direction for the Japanese yen against the US dollar. Macro clarity is needed before establishing directional exposure.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst impacting spot gold prices from the provided news updates. Safe-haven and rate expectations remain unaddressed by current headlines.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "Societe Generale notes that downside risks are building for the Canadian dollar against the US dollar. Weakness in the loonie supports an upward drift in the currency pair.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 219.2s
+[2026/11/16 11:37:49,82] Finished 
+[2026/11/16 12:04:00,26] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T10:04:03.618Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (10 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T10:04:10.400Z] Running AI market analysis...
+Gemini responded in 270.5s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Broad US Dollar upward momentum remains entrenched, while emerging fiscal risks cloud interest rate support for the Euro.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Persistent US Dollar momentum creates headwinds for the Pound amid an absence of offsetting UK catalysts.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Resilient US Dollar strength and stubborn upside momentum continue to elevate USDJPY.",
+    "suggestedAction": "BUY ON DIPS"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Enduring bullish momentum in the US Dollar exerts downward pressure on dollar-denominated Gold bullion.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 60,
+    "summaryCatalyst": "Broad US Dollar resilience and momentum provide sustained underlying support for the pair.",
+    "suggestedAction": "BUY ON DIPS"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 272.3s
+[2026/11/16 12:08:42,75] Finished 
+[2026/11/16 12:34:00,25] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T10:34:03.710Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (9 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T10:34:10.654Z] Running AI market analysis...
+Gemini responded in 165.7s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst or recent news directly impacting this asset.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst or recent news directly impacting this asset.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst or recent news directly impacting this asset.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Societe Generale notes that the prevailing downtrend in Gold is extending toward lower price projections.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst or recent news directly impacting this asset.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 167.1s
+[2026/11/16 12:36:57,80] Finished 
+[2026/11/16 13:04:00,26] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T11:04:03.767Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (8 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T11:04:10.584Z] Running AI market analysis...
+Gemini responded in 422.8s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear macroeconomic or news catalyst provided in current feeds.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear macroeconomic or news catalyst provided in current feeds.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear macroeconomic or news catalyst provided in current feeds.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Gold exhibits a slight bounce above $3,850, but underlying sentiment and technical pressure maintain an intact bearish bias.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear macroeconomic or news catalyst provided in current feeds.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 425.7s
+[2026/11/16 13:11:16,36] Finished 
+[2026/11/16 13:34:00,29] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T11:34:03.675Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (9 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T11:34:11.429Z] Running AI market analysis...
+Gemini responded in 231.2s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst or specific economic driver provided in current headlines for EURUSD.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst or specific market driver provided in recent news for GBPUSD.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 55,
+    "summaryCatalyst": "UOB analysts project range-bound price action ahead for the Yen against the US Dollar amid a lack of directional impulse.",
+    "suggestedAction": "TRADE THE RANGE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Gold remains pressured near multi-month lows as persistent hawkish Federal Reserve expectations cap upside momentum.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst or targeted headline driver available for the Canadian Dollar in current reports.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 232.8s
+[2026/11/16 13:38:04,33] Finished 
+[2026/11/16 14:04:00,31] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T12:04:05.187Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (10 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T12:04:12.459Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+Gemini responded in 754.2s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "The US Dollar continues its upward momentum driven by hawkish Federal Reserve interest rate repricing, exerting downward pressure on European currencies.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 74,
+    "summaryCatalyst": "Extended USD strength fueled by Fed rate expectations keeps the British Pound under heavy selling pressure.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 78,
+    "summaryCatalyst": "Widening rate differential expectations favor the Greenback as markets reprice Fed policy trajectory higher.",
+    "suggestedAction": "BUY ON DIPS"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 72,
+    "summaryCatalyst": "A firmer US Dollar and higher expected Fed yields undermine non-yielding gold sentiment in the near term.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 82,
+    "summaryCatalyst": "Broader US Dollar momentum combined with subdued Canadian inflation limiting BoC rate hike risks creates upside potential for USDCAD.",
+    "suggestedAction": "BUY ON DIPS"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 758.4s
+[2026/11/16 14:16:50,94] Finished 
+[2026/11/16 14:34:00,32] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T12:34:05.254Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (10 via dollar/Fed keywords), saved 5 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T12:34:13.838Z] Running AI market analysis...
+Gemini responded in 314.1s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "The US Dollar Index extended gains as market participants price in a prolonged Fed hiking cycle, putting downward pressure on EUR/USD.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 45,
+    "summaryCatalyst": "Broad USD strength driven by Fed rate expectations is counterbalanced by analyst commentary pointing to limited downside for the British Pound.",
+    "suggestedAction": "RANGE TRADE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "The Japanese Yen continues to soften despite potential BoJ December rate hikes, while broad US Dollar momentum provides persistent tailwinds.",
+    "suggestedAction": "BUY ON DIPS"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "Gold faces ongoing technical and fundamental selling pressure as analysts forecast further losses amid rising US Dollar strength and higher-for-longer yields.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "Broad-based US Dollar appreciation fueled by extended Fed policy tightening sentiment supports upside potential against the Canadian Dollar.",
+    "suggestedAction": "BUY ON BREAKOUT"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 5 articles as processed.
+Total run time: 317.1s
+[2026/11/16 14:39:31,00] Finished 
+[2026/11/16 15:04:00,33] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T13:04:04.008Z] Starting RSS news ingestion...
+Ingestion complete. 20 relevant articles found (11 via dollar/Fed keywords), saved 3 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T13:04:11.073Z] Running AI market analysis...
+Gemini responded in 300.8s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst directly impacting the Euro in recent news headlines.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "The British Pound is under pressure below 1.3200 as renewed Federal Reserve rate hike expectations bolster the US Dollar.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Bank of Japan policy tightening expectations are providing solid support to the Japanese Yen against the US Dollar.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst directly impacting Gold price action in current news updates.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "The Canadian Dollar has fallen toward 19-month lows around 1.4300 ahead of domestic inflation figures.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 3 articles as processed.
+Total run time: 303.8s
+[2026/11/16 15:09:14,95] Finished 
+[2026/11/16 15:34:00,34] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T13:34:03.851Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (12 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T13:34:11.199Z] Running AI market analysis...
+Gemini responded in 200.7s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "The provided news headline regarding tech sentiment and KRW offers no direct fundamental catalyst or macro implications for EURUSD.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst or fundamental driver for GBPUSD in the provided regional Asian currency headline.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 25,
+    "summaryCatalyst": "While regional Asian tech sentiment impacts broader currency flows, the headline offers no clear directional catalyst for USDJPY.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "The news focus on KRW volatility provides no clear fundamental catalyst or macro driver for gold pricing.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "No clear catalyst is present in the provided news to establish a directional bias for USDCAD.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 202.1s
+[2026/11/16 15:37:33,34] Finished 
+[2026/11/16 16:04:00,33] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T14:04:03.949Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T14:04:11.982Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+Gemini responded in 132.9s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst for EURUSD in the provided commentary regarding the Singapore Dollar.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst for GBPUSD in the provided Singapore Dollar update.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst directly impacting USDJPY based on the limited regional SGD commentary.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst for Gold prices within the reported SGD/USD technical bias snippet.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 15,
+    "summaryCatalyst": "There is no clear catalyst driving USDCAD fundamentals in the provided headlines.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 1 articles as processed.
+Total run time: 135.6s
+[2026/11/16 16:06:27,59] Finished 
+[2026/11/16 16:34:00,37] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T14:34:03.977Z] Starting RSS news ingestion...
+Ingestion complete. 22 relevant articles found (14 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T14:34:10.910Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+Gemini responded in 197.6s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst or directional bias provided in the current headlines regarding Federal Reserve rate hike impacts.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "Recent news provides no clear catalyst or directional guidance for the British Pound versus the US Dollar.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "Headlines offer only speculative questions regarding Fed hikes with no clear catalyst for the currency pair.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst determining Gold price movement based on the broad inquiry into Fed rate policy.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "The Canadian Dollar is extending its decline after mixed domestic CPI figures failed to provide fundamental support, pushing USDCAD higher.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 199.0s
+[2026/11/16 16:37:29,97] Finished 
+[2026/11/16 17:04:00,33] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T15:04:04.119Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T15:04:11.181Z] Running AI market analysis...
+No new articles to process.
+[2026/11/16 17:04:13,35] Finished 
+[2026/11/16 17:34:00,48] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T15:34:06.026Z] Starting RSS news ingestion...
+Ingestion complete. 22 relevant articles found (14 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T15:34:13.306Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+Gemini error 503 (attempt 2/5). Retrying in 4s...
+Gemini error 429 (attempt 3/5). Retrying in 8s...
+Gemini error 429 (attempt 4/5). Retrying in 16s...
+Error during AI analysis: ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 16h25m11.516832844s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"description":"Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.","quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-3.8-flash","location":"global"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"59111s"}]}}
+    at throwErrorIfNotOK (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:1197:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:742:9)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:60:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:111:20) {
+  status: 429
+}
+[2026/11/16 17:34:48,66] Finished 
