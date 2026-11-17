@@ -1733,3 +1733,545 @@ Error during AI analysis: ApiError: {"error":{"code":429,"message":"You exceeded
   status: 429
 }
 [2026/11/16 17:34:48,66] Finished 
+[2026/11/16 18:04:00,35] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T16:04:03.469Z] Starting RSS news ingestion...
+Ingestion complete. 23 relevant articles found (14 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T16:04:11.247Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+Gemini daily quota exhausted for this model. Not retrying.
+Error during AI analysis: ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 15h55m34.925058476s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"description":"Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.","quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-3.8-flash","location":"global"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"57334s"}]}}
+    at throwErrorIfNotOK (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:1197:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:742:9)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:115:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:173:20) {
+  status: 429
+}
+[2026/11/16 18:04:25,14] Finished 
+[2026/11/16 18:34:00,39] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T16:34:03.579Z] Starting RSS news ingestion...
+Ingestion complete. 23 relevant articles found (13 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T16:34:10.692Z] Running AI market analysis...
+Last Gemini call was 30 min ago (minimum 90). Skipping this run.
+[2026/11/16 18:34:11,75] Finished 
+[2026/11/16 19:04:00,42] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T17:04:03.625Z] Starting RSS news ingestion...
+Ingestion complete. 22 relevant articles found (14 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T17:04:14.585Z] Running AI market analysis...
+Last Gemini call was 60 min ago (minimum 90). Skipping this run.
+[2026/11/16 19:04:44,11] Finished 
+[2026/11/16 19:34:00,43] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T17:34:03.528Z] Starting RSS news ingestion...
+Ingestion complete. 22 relevant articles found (14 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T17:34:41.771Z] Running AI market analysis...
+Error during AI analysis: TypeError: fetch failed
+    at node:internal/deps/undici/undici:13510:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async runFetch (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:883:20)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:115:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:173:20) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: generativelanguage.googleapis.com:443, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2602:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2568:35)
+      at process.processImmediate (node:internal/timers:485:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
+  }
+}
+[2026/11/16 19:34:55,13] Finished 
+[2026/11/16 20:04:00,47] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T18:04:03.583Z] Starting RSS news ingestion...
+Ingestion complete. 22 relevant articles found (13 via dollar/Fed keywords), saved 3 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T18:04:24.723Z] Running AI market analysis...
+Last Gemini call was 30 min ago (minimum 90). Skipping this run.
+[2026/11/16 20:04:33,56] Finished 
+[2026/11/16 20:34:00,52] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T18:34:04.103Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T18:34:12.190Z] Running AI market analysis...
+Last Gemini call was 60 min ago (minimum 90). Skipping this run.
+[2026/11/16 20:34:14,37] Finished 
+[2026/11/16 21:04:00,55] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T19:04:06.394Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T19:04:13.136Z] Running AI market analysis...
+Last Gemini call was 90 min ago (minimum 90). Skipping this run.
+[2026/11/16 21:04:14,36] Finished 
+[2026/11/16 21:34:00,53] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T19:34:03.783Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T19:34:18.305Z] Running AI market analysis...
+^C^C[2026/11/16 22:04:00,62] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T20:04:07.023Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T20:04:14.352Z] Running AI market analysis...
+Last Gemini call was 30 min ago (minimum 90). Skipping this run.
+[2026/11/16 22:04:16,64] Finished 
+[2026/11/16 22:34:00,59] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T20:34:03.834Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T20:34:10.442Z] Running AI market analysis...
+Last Gemini call was 60 min ago (minimum 90). Skipping this run.
+[2026/11/16 22:34:12,67] Finished 
+[2026/11/16 23:04:00,63] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T21:04:03.906Z] Starting RSS news ingestion...
+Ingestion complete. 22 relevant articles found (14 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T21:04:10.777Z] Running AI market analysis...
+Last Gemini call was 90 min ago (minimum 90). Skipping this run.
+[2026/11/16 23:04:14,61] Finished 
+[2026/11/16 23:34:00,66] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T21:34:03.980Z] Starting RSS news ingestion...
+Ingestion complete. 22 relevant articles found (14 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T21:34:11.290Z] Running AI market analysis...
+Gemini error 503 (attempt 1/5). Retrying in 2s...
+Gemini daily quota exhausted for this model. Not retrying.
+Error during AI analysis: ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 10h25m26.258577707s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"description":"Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.","quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-3.8-flash","location":"global"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"37526s"}]}}
+    at throwErrorIfNotOK (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:1197:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:742:9)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:115:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:173:20) {
+  status: 429
+}
+[2026/11/16 23:34:33,89] Finished 
+[2026/11/17  0:04:00,65] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T22:04:03.807Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T22:04:11.368Z] Running AI market analysis...
+Last Gemini call was 30 min ago (minimum 90). Skipping this run.
+[2026/11/17  0:04:13,61] Finished 
+[2026/11/17  0:34:00,66] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T22:34:03.803Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (11 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T22:34:26.916Z] Running AI market analysis...
+Last Gemini call was 60 min ago (minimum 90). Skipping this run.
+[2026/11/17  0:34:29,06] Finished 
+[2026/11/17  1:04:00,68] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T23:04:04.325Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (10 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T23:04:15.157Z] Running AI market analysis...
+Last Gemini call was 90 min ago (minimum 90). Skipping this run.
+[2026/11/17  1:04:17,38] Finished 
+[2026/11/17  1:34:00,68] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-16T23:34:03.871Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (10 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-16T23:34:11.000Z] Running AI market analysis...
+Gemini responded in 1013.2s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "The Euro has plunged to fresh 19-month lows near 1.1000 as broadening US inflation fuels aggressive Fed rate hike speculation.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "The Pound is heading for a fifth straight day of declines under sustained selling pressure driven by hawkish Fed policy expectations.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BEARISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "The Yen is gaining ground as Japanese verbal intervention takes effect alongside increased safe-haven flows amid Wall Street weakness.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "Gold has dropped to a one-year low under intense pressure from surging US Dollar strength and rising bets on further Fed rate hikes.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst for the currency pair as Canadian headlines are currently limited to corporate energy M&A developments without monetary policy guidance.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 15 articles as processed.
+Total run time: 1017.3s
+[2026/11/17  1:51:08,36] Finished 
+[2026/11/17  2:04:00,69] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T00:04:03.959Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (10 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T00:04:11.569Z] Running AI market analysis...
+Last Gemini call was 30 min ago (minimum 90). Skipping this run.
+[2026/11/17  2:04:13,73] Finished 
+[2026/11/17  2:34:00,69] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T00:34:03.888Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (9 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T00:34:11.282Z] Running AI market analysis...
+Last Gemini call was 60 min ago (minimum 90). Skipping this run.
+[2026/11/17  2:34:12,25] Finished 
+[2026/11/17  3:04:00,77] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T01:04:04.123Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (9 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T01:04:10.432Z] Running AI market analysis...
+Last Gemini call was 90 min ago (minimum 90). Skipping this run.
+[2026/11/17  3:04:11,41] Finished 
+[2026/11/17  3:34:00,78] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T01:34:04.025Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (8 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T01:34:11.837Z] Running AI market analysis...
+Gemini responded in 28.1s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 78,
+    "summaryCatalyst": "The Euro remains under heavy pressure below 1.1000 due to persistent US Dollar strength and renewed Fed rate hike expectations.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 72,
+    "summaryCatalyst": "The British Pound extends a five-day decline against a resilient US Dollar ahead of pivotal domestic labor and inflation prints.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "US Dollar strength keeps USDJPY pressured near 160.00, though verbal intervention warnings from Tokyo pose near-term ceiling risks.",
+    "suggestedAction": "BUY ON DIP"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst directly addressing Gold in the recent reports aside from secondary effects of broader US Dollar strength.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 82,
+    "summaryCatalyst": "The pair benefits from the combination of rising Federal Reserve rate hike speculation and tumbling crude oil prices weighing on the Canadian Dollar.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 5 articles as processed.
+Total run time: 31.1s
+[2026/11/17  3:34:42,99] Finished 
+[2026/11/17  4:04:00,80] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T02:04:04.175Z] Starting RSS news ingestion...
+Ingestion complete. 14 relevant articles found (5 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T02:04:11.419Z] Running AI market analysis...
+Last Gemini call was 30 min ago (minimum 90). Skipping this run.
+[2026/11/17  4:04:13,59] Finished 
+[2026/11/17  4:34:00,84] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T02:34:04.244Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (5 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T02:34:10.956Z] Running AI market analysis...
+Last Gemini call was 60 min ago (minimum 90). Skipping this run.
+[2026/11/17  4:34:13,06] Finished 
+[2026/11/17  5:04:01,21] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T03:04:04.456Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (5 via dollar/Fed keywords), saved 0 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T03:04:12.055Z] Running AI market analysis...
+Last Gemini call was 90 min ago (minimum 90). Skipping this run.
+[2026/11/17  5:04:13,04] Finished 
+[2026/11/17  5:34:00,88] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T03:34:04.008Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (5 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T03:34:10.781Z] Running AI market analysis...
+Gemini responded in 14.7s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 25,
+    "summaryCatalyst": "There is no clear catalyst for the Euro, as the US Dollar retreats temporarily while maintaining a broader bullish trend.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "The British Pound is weakening ahead of key UK jobs data amid an underlying bullish outlook for the US Dollar.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "The Japanese Yen gathers strength due to acute intervention risk from Japanese authorities ahead of US Retail Sales.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Gold remains under downward price pressure despite persistent long-term physical buying from China.",
+    "suggestedAction": "SELL RALLIES"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst for the Canadian Dollar in the recent news flow to establish a directional bias.",
+    "suggestedAction": "STAND ASIDE"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 4 articles as processed.
+Total run time: 17.2s
+[2026/11/17  5:34:28,08] Finished 
+[2026/11/17  6:04:00,91] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T04:04:04.065Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (6 via dollar/Fed keywords), saved 3 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T04:04:12.262Z] Running AI market analysis...
+Last Gemini call was 30 min ago (minimum 90). Skipping this run.
+[2026/11/17  6:04:14,39] Finished 
+[2026/11/17  6:34:00,98] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T04:34:04.112Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (6 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T04:34:11.247Z] Running AI market analysis...
+Last Gemini call was 60 min ago (minimum 90). Skipping this run.
+[2026/11/17  6:34:13,45] Finished 
+[2026/11/17  7:04:00,91] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T05:04:03.981Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (5 via dollar/Fed keywords), saved 1 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T05:04:11.399Z] Running AI market analysis...
+Gemini daily quota exhausted for this model. Not retrying.
+Error during AI analysis: ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 2h55m43.837070356s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"description":"Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.","quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-3.8-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"10543s"}]}}
+    at throwErrorIfNotOK (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:1197:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:742:9)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:115:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:173:20) {
+  status: 429
+}
+[2026/11/17  7:04:16,32] Finished 
