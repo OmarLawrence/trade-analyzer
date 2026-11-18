@@ -2275,3 +2275,25 @@ Error during AI analysis: ApiError: {"error":{"code":429,"message":"You exceeded
   status: 429
 }
 [2026/11/17  7:04:16,32] Finished 
+[2026/11/17  7:34:00,95] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T05:34:04.780Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (5 via dollar/Fed keywords), saved 2 new to Firestore.
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-17T05:34:12.725Z] Running AI market analysis...
+Last Gemini call was 30 min ago (minimum 90). Skipping this run.
+[2026/11/17  7:34:15,06] Finished 
+[2026/11/17  7:49:01,87] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-17T05:49:05.425Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (5 via dollar/Fed keywords), saved 2 new to Firestore.
+[2026/11/17  7:49:09,62] Finished 

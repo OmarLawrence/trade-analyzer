@@ -109,26 +109,24 @@ async function reserveRequest(): Promise<void> {
 
 // Retry on temporary Google-side errors (503 overloaded, 500, short-term 429 rate limit).
 // A DAILY quota 429 is not retried, because retrying only wastes requests.
-async function withRetry<T>(fn: () => Promise<T>, maxAttempts = 5): Promise<T> {
-  for (let attempt = 1; ; attempt++) {
+async function withRetry<T>(fn: () => Promise<T>, retries = 2, delayMs = 3000): Promise<T> {
+  for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       return await fn();
-    } catch (err: any) {
-      const status = err?.status ?? err?.code;
-      const dailyQuota = status === 429 && /PerDay|per day/i.test(String(err?.message ?? ''));
-      if (dailyQuota) {
-        console.error('Gemini daily quota exhausted for this model. Not retrying.');
-        throw err;
+    } catch (error: any) {
+      // Do NOT retry 429 quota/rate-limit errors — abort immediately
+      if (error?.status === 429 || error?.message?.includes('RESOURCE_EXHAUSTED')) {
+        console.error('Daily Gemini API quota reached. Skipping retry until next scheduled window.');
+        throw error;
       }
-      const retryable = status === 503 || status === 429 || status === 500;
-      if (!retryable || attempt >= maxAttempts) throw err;
-      const waitSec = Math.min(2 ** attempt, 30); // 2s, 4s, 8s, 16s...
-      console.warn(`Gemini error ${status} (attempt ${attempt}/${maxAttempts}). Retrying in ${waitSec}s...`);
-      await new Promise((r) => setTimeout(r, waitSec * 1000));
+
+      if (attempt === retries) throw error;
+      console.warn(`Attempt ${attempt} failed, retrying in ${delayMs}ms...`);
+      await new Promise((res) => setTimeout(res, delayMs));
     }
   }
+  throw new Error('Unreachable');
 }
-
 async function analyzeNewsAndGenerateSignals() {
   const runStart = Date.now();
   console.log(`[${new Date().toISOString()}] Running AI market analysis...`);
