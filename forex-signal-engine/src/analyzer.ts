@@ -116,24 +116,23 @@ async function reserveRequest(): Promise<void> {
 }
 
 // Retry on temporary Google-side errors (503 overloaded, 500, short-term 429 rate limit).
-// A DAILY quota 429 is not retried, because retrying only wastes requests.
-async function withRetry<T>(fn: () => Promise<T>, retries = 2, delayMs = 3000): Promise<T> {
+async function withRetry<T>(fn: () => Promise<T>, retries = 4, delayMs = 5000): Promise<T> {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       return await fn();
     } catch (error: any) {
-      // Do NOT retry 429 quota/rate-limit errors — abort immediately
-      if (error?.status === 429 || error?.message?.includes('RESOURCE_EXHAUSTED')) {
-        console.error('Daily Gemini API quota reached. Skipping retry until next scheduled window.');
+      const is503 = error?.status === 503 || error?.message?.includes('503') || error?.message?.includes('UNAVAILABLE');
+      
+      if (is503 && attempt < retries) {
+        console.warn(`[Warning] Model experiencing high demand (503). Retrying in ${delayMs / 1000}s (Attempt ${attempt}/${retries})...`);
+        await new Promise((res) => setTimeout(res, delayMs));
+        delayMs *= 2; // Exponential backoff: 5s -> 10s -> 20s -> 40s
+      } else {
         throw error;
       }
-
-      if (attempt === retries) throw error;
-      console.warn(`Attempt ${attempt} failed, retrying in ${delayMs}ms...`);
-      await new Promise((res) => setTimeout(res, delayMs));
     }
   }
-  throw new Error('Unreachable');
+  throw new Error('Max retries reached for API call.');
 }
 async function analyzeNewsAndGenerateSignals() {
   const runStart = Date.now();

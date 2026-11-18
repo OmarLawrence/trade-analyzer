@@ -1,5 +1,5 @@
 @echo off
-cd /d F:\forex_trerd\forex-signal-engine
+cd /d F:\forex_trader\forex-signal-engine
 if not exist logs mkdir logs
 
 echo [%date% %time%] Starting >> logs\run.log

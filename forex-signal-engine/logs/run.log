@@ -2528,3 +2528,78 @@ Ingestion complete. 20 relevant articles found (12 via dollar/Fed keywords), sav
 [2026-11-18T13:19:11.264Z] Running AI market analysis...
 Last Gemini call was 44 min ago (minimum 90). Skipping this run.
 [2026/11/18 15:19:13,37] Finished 
+[2026/11/18 18:21:44,86] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T16:21:47.724Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 9 new to Firestore.
+[2026/11/18 18:21:52,00] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T16:21:54.839Z] Running AI market analysis...
+Attempt 1 failed, retrying in 3000ms...
+Error during AI analysis: ApiError: {"error":{"code":503,"message":"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","status":"UNAVAILABLE"}}
+    at throwErrorIfNotOK (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:1197:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:742:9)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:123:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:179:20) {
+  status: 503
+}
+[2026/11/18 18:38:17,36] Finished 
+[2026/11/18 19:00:02,13] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T17:00:05.203Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/18 19:00:08,73] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T17:00:11.752Z] Running AI market analysis...
+Attempt 1 failed, retrying in 3000ms...
+Error during AI analysis: ApiError: {"error":{"code":503,"message":"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","status":"UNAVAILABLE"}}
+    at throwErrorIfNotOK (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:1197:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:742:9)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:123:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:179:20) {
+  status: 503
+}
+[2026/11/18 19:00:27,40] Finished 
+[2026/11/18 20:00:01,33] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T18:00:05.213Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (14 via dollar/Fed keywords), saved 2 new to Firestore.
+[2026/11/18 20:00:09,39] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T18:00:13.378Z] Running AI market analysis...
+Attempt 1 failed, retrying in 3000ms...
+Error during AI analysis: ApiError: {"error":{"code":503,"message":"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","status":"UNAVAILABLE"}}
+    at throwErrorIfNotOK (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:1197:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:742:9)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:123:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:179:20) {
+  status: 503
+}
+[2026/11/18 20:00:26,78] Finished 
