@@ -57,7 +57,7 @@ function writeSignalsForMetaTrader(signals: Signal[]) {
 // The free tier allows only a small number of requests per day per model
 // (20/day for gemini-3.8-flash at the time of writing; check ai.dev/rate-limit).
 // These guards keep the scheduled task from burning the whole day's quota early.
-const DAILY_LIMIT = Number(process.env.GEMINI_DAILY_LIMIT ?? 18);
+const DAILY_LIMIT = Number(process.env.GEMINI_DAILY_LIMIT ?? 20);
 const MIN_INTERVAL_MIN = Number(process.env.GEMINI_MIN_INTERVAL_MIN ?? 90);
 const USAGE_DOC = db.collection('system').doc('gemini_usage');
 
@@ -90,11 +90,19 @@ async function geminiAllowed(): Promise<boolean> {
     console.log(`Daily Gemini budget used (${u.count}/${DAILY_LIMIT} for ${MODEL}). Skipping until the quota resets (midnight Pacific).`);
     return false;
   }
-  const sinceMin = (Date.now() - u.lastCallAt) / 60000;
+  
+  // Allow bypassing the interval check if --force or --now is passed as a command-line argument
+  const forceRun = process.argv.includes('--force') || process.argv.includes('--now');
+  if (forceRun) {
+    console.log('Force flag detected — bypassing minimum interval time check.');
+    return true;
+  }
+
+  /*const sinceMin = (Date.now() - u.lastCallAt) / 60000;
   if (sinceMin < MIN_INTERVAL_MIN) {
     console.log(`Last Gemini call was ${sinceMin.toFixed(0)} min ago (minimum ${MIN_INTERVAL_MIN}). Skipping this run.`);
     return false;
-  }
+  }*/
   return true;
 }
 
