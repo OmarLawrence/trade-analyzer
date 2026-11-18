@@ -2297,3 +2297,234 @@ Last Gemini call was 30 min ago (minimum 90). Skipping this run.
 [2026-11-17T05:49:05.425Z] Starting RSS news ingestion...
 Ingestion complete. 16 relevant articles found (5 via dollar/Fed keywords), saved 2 new to Firestore.
 [2026/11/17  7:49:09,62] Finished 
+[2026/11/18 10:04:00,39] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T08:04:06.622Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (9 via dollar/Fed keywords), saved 18 new to Firestore.
+[2026/11/18 10:04:15,48] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T08:04:18.986Z] Running AI market analysis...
+Gemini responded in 574.7s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "While the Euro managed a mild rebound from multi-month lows, broader US Dollar demand fueled by Fed rate hike bets continues to limit upside.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "The British Pound is sliding sharply following softer UK headline CPI numbers and deteriorating yield support from the Bank of England.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear catalyst for USDJPY in the current newsflow, as broader US Dollar strength conflicts with choppy Yen cross dynamics.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Gold remains vulnerable below critical levels as hawkish Fed rate hike expectations and a strong US Dollar stifle upside momentum ahead of the FOMC minutes.",
+    "suggestedAction": "SELL RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "USD/CAD holds firmly above 1.4300 near multi-month highs, supported by broad US Dollar resilience as markets position for upcoming FOMC minutes.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 15 articles as processed.
+Total run time: 578.0s
+[2026/11/18 10:13:57,02] Finished 
+[2026/11/18 10:49:00,19] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T08:49:03.622Z] Starting RSS news ingestion...
+Error fetching feed https://xml.fxstreet.com/news/forex-news/index.xml: Error: getaddrinfo ENOTFOUND xml.fxstreet.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'xml.fxstreet.com'
+}
+Error fetching feed https://www.investing.com/rss/news_25.rss: Error: getaddrinfo ENOTFOUND www.investing.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'www.investing.com'
+}
+Error fetching feed https://www.investing.com/rss/news_301.rss: Error: getaddrinfo ENOTFOUND www.investing.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'www.investing.com'
+}
+Ingestion complete. 0 relevant articles found (0 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/18 10:49:03,73] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T08:49:07.015Z] Running AI market analysis...
+Last Gemini call was 45 min ago (minimum 90). Skipping this run.
+[2026/11/18 10:49:31,70] Finished 
+[2026/11/18 11:34:00,18] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T09:34:03.604Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (12 via dollar/Fed keywords), saved 9 new to Firestore.
+[2026/11/18 11:34:07,71] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T09:34:10.840Z] Running AI market analysis...
+Last Gemini call was 90 min ago (minimum 90). Skipping this run.
+[2026/11/18 11:34:13,01] Finished 
+[2026/11/18 12:19:00,22] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T10:19:03.723Z] Starting RSS news ingestion...
+Ingestion complete. 20 relevant articles found (14 via dollar/Fed keywords), saved 2 new to Firestore.
+[2026/11/18 12:19:11,27] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T10:19:14.541Z] Running AI market analysis...
+Gemini responded in 111.0s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Sustained US Dollar momentum driven by pre-FOMC positioning keeps EUR/USD pinned below 1.1000 and vulnerable to further declines toward 1.0960.",
+    "suggestedAction": "SELL ON RALLY"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 25,
+    "summaryCatalyst": "Conflicting signals between overarching US Dollar strength and a short-term Sterling technical rebound ahead of UK jobs data leave no clear catalyst.",
+    "suggestedAction": "STAND ASIDE"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 68,
+    "summaryCatalyst": "Broad Greenback strength toward 104.00 on the DXY keeps upside pressure intact while Yen recovery attempts remain firmly capped.",
+    "suggestedAction": "BUY ON DIP"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 78,
+    "summaryCatalyst": "Precious metals face heavy headwinds from the rallying US Dollar ahead of FOMC minutes, reflected in broader precious metals weakness.",
+    "suggestedAction": "SELL ON RALLY"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "Strong institutional demand for the US Dollar has pushed USD/CAD to fresh 19-month highs near 1.4350 ahead of the Fed minutes.",
+    "suggestedAction": "BUY ON DIP"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 15 articles as processed.
+Total run time: 114.5s
+[2026/11/18 12:21:09,07] Finished 
+[2026/11/18 13:04:00,23] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T11:04:04.002Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (13 via dollar/Fed keywords), saved 1 new to Firestore.
+[2026/11/18 13:04:07,81] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T11:04:11.322Z] Running AI market analysis...
+Last Gemini call was 45 min ago (minimum 90). Skipping this run.
+[2026/11/18 13:04:12,30] Finished 
+[2026/11/18 13:49:00,21] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T11:49:03.710Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (14 via dollar/Fed keywords), saved 6 new to Firestore.
+[2026/11/18 13:49:07,33] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T11:49:10.574Z] Running AI market analysis...
+Last Gemini call was 90 min ago (minimum 90). Skipping this run.
+[2026/11/18 13:49:11,50] Finished 
+[2026/11/18 14:34:00,32] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T12:34:03.917Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (13 via dollar/Fed keywords), saved 3 new to Firestore.
+[2026/11/18 14:34:09,40] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T12:34:12.919Z] Running AI market analysis...
+Attempt 1 failed, retrying in 3000ms...
+Error during AI analysis: ApiError: {"error":{"code":503,"message":"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","status":"UNAVAILABLE"}}
+    at throwErrorIfNotOK (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:1197:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:742:9)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:115:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:171:20) {
+  status: 503
+}
+[2026/11/18 14:36:51,12] Finished 
+[2026/11/18 15:19:00,25] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-18T13:19:03.778Z] Starting RSS news ingestion...
+Ingestion complete. 20 relevant articles found (12 via dollar/Fed keywords), saved 6 new to Firestore.
+[2026/11/18 15:19:08,04] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-18T13:19:11.264Z] Running AI market analysis...
+Last Gemini call was 44 min ago (minimum 90). Skipping this run.
+[2026/11/18 15:19:13,37] Finished 
