@@ -5,6 +5,7 @@ import type { QueryDocumentSnapshot } from 'firebase-admin/firestore';
 import { db } from './config/firebase.js';
 import { mkdirSync, writeFileSync, renameSync } from 'fs';
 import { randomUUID } from 'crypto';
+import { lookup } from 'dns/promises';
 import path from 'path';
 
 const apiKey = process.env.GEMINI_API_KEY;
@@ -56,6 +57,25 @@ function resolveMtDir(): string {
 const MT_DIR = resolveMtDir();
 
 const sleep = (ms: number) => new Promise<void>((res) => setTimeout(res, ms));
+
+// ---- Network pre-check ----------------------------------------------------
+// If DNS can't resolve Google's hosts (Wi-Fi drop, VPN, just woke from sleep), skip the run
+// instead of failing midway. A mid-run failure after the Gemini call wastes a quota request.
+// Retries a few times first, since a task often fires a moment before the network is back.
+async function networkUp(attempts = 3, gapMs = 5000): Promise<boolean> {
+  for (let i = 1; i <= attempts; i++) {
+    try {
+      await Promise.all([
+        lookup('firestore.googleapis.com'),
+        lookup('generativelanguage.googleapis.com'),
+      ]);
+      return true;
+    } catch {
+      if (i < attempts) await sleep(gapMs);
+    }
+  }
+  return false;
+}
 
 // Writes a simple text file for the EA:
 //   line 1: unix timestamp (seconds, UTC)
@@ -331,6 +351,11 @@ async function analyzeNewsAndGenerateSignals(): Promise<number> {
   const runStart = Date.now();
   console.log(`[${new Date().toISOString()}] Running AI market analysis...`);
 
+  if (!(await networkUp())) {
+    console.log('No network/DNS for Google services. Skipping this run (no quota spent).');
+    return 0;
+  }
+
   if (!(await geminiAllowed())) return 0;
 
   // 1. Claim unprocessed news from Firestore
@@ -364,6 +389,10 @@ ${articles.join('\n')}
 
 Return exactly one entry for EACH of the 5 assets: EURUSD, GBPUSD, USDJPY, XAUUSD and USDCAD. Give each an up-to-date market bias and trade option based on this news. If the news gives no clear direction for an asset, return bias NEUTRAL with a low confidenceScore (1-30), a summaryCatalyst saying there is no clear catalyst, and suggestedAction STAND_ASIDE.
 `;
+
+    // Read everything Firestore-dependent BEFORE spending a Gemini request.
+    // If this read fails, the run aborts here and no quota is used.
+    const previousSignals = await withRetry(() => readPreviousSignals());
 
     // 2. Ask Gemini for structured JSON
     const geminiStart = Date.now();
@@ -440,27 +469,29 @@ Return exactly one entry for EACH of the 5 assets: EURUSD, GBPUSD, USDJPY, XAUUS
     if (missing.length > 0) console.log(`Note: AI returned no entry for: ${missing.join(', ')} (carrying forward previous / neutral).`);
 
     const updatedAt = new Date().toISOString();
-    const signals = mergeWithPrevious(byPair, await readPreviousSignals(), pairsWithNews, updatedAt);
+    const signals = mergeWithPrevious(byPair, previousSignals, pairsWithNews, updatedAt);
     console.log('Generated Signals:', JSON.stringify(signals, null, 2));
 
-    // 4. Save signals + mark articles processed in one atomic batch
-    const batch = db.batch();
-    batch.set(db.collection('active_signals').doc('latest_market_bias'), { updatedAt, signals });
-    // Keep a history, since "latest" is overwritten every run (expireAt is for a Firestore TTL policy)
-    batch.set(db.collection('signal_history').doc(), {
-      updatedAt,
-      signals,
-      expireAt: new Date(Date.now() + HISTORY_TTL_DAYS * 86400 * 1000),
-    });
-    for (const d of docs) {
-      batch.update(d.ref, {
-        processed: true,
-        processedAt: updatedAt,
-        claimedUntil: FieldValue.delete(),
-        claimId: FieldValue.delete(),
-      });
-    }
-    await batch.commit();
+    // 4. Save signals + mark articles processed in one atomic batch.
+    // The Gemini result is already paid for, so retry the write if the network blips.
+    // The history doc ref is created once, outside the retry, so a retry can't create duplicates.
+    const historyRef = db.collection('signal_history').doc();
+    const expireAt = new Date(Date.now() + HISTORY_TTL_DAYS * 86400 * 1000);
+    await withRetry(async () => {
+      const batch = db.batch(); // fresh batch per attempt
+      batch.set(db.collection('active_signals').doc('latest_market_bias'), { updatedAt, signals });
+      // Keep a history, since "latest" is overwritten every run (expireAt is for a Firestore TTL policy)
+      batch.set(historyRef, { updatedAt, signals, expireAt });
+      for (const d of docs) {
+        batch.update(d.ref, {
+          processed: true,
+          processedAt: updatedAt,
+          claimedUntil: FieldValue.delete(),
+          claimId: FieldValue.delete(),
+        });
+      }
+      await batch.commit();
+    }, 5);
     committed = true;
 
     const mtOk = await writeSignalsForMetaTrader(signals);

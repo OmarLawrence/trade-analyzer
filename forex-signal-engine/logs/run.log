@@ -3321,3 +3321,237 @@ Ingestion complete. 19 relevant articles found (12 via dollar/Fed keywords), sav
 [2026-11-20T12:00:10.016Z] Running AI market analysis...
 Last Gemini call was 9 min ago (minimum 60). Skipping this run.
 [2026/11/20 14:00:12,08] Finished 
+[2026/11/20 15:00:01,04] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-20T13:00:04.348Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (13 via dollar/Fed keywords), saved 3 new to Firestore.
+[2026/11/20 15:00:09,13] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-20T13:00:12.282Z] Running AI market analysis...
+Gemini responded in 995.0s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 72,
+    "summaryCatalyst": "Hawkish Federal Reserve rate pricing and safe-haven Dollar demand continue to pressure the Euro lower.",
+    "suggestedAction": "SELL_RALLY",
+    "asOf": "2026-11-20T13:16:50.978Z"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Persistent downside risks against a firm Greenback and strong technical resistance capping rallies at 1.3140 weigh on Sterling.",
+    "suggestedAction": "SELL_RALLY",
+    "asOf": "2026-11-20T13:16:50.978Z"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BEARISH",
+    "confidenceScore": 68,
+    "summaryCatalyst": "Rising domestic inflation supporting further BoJ tightening coupled with AI equity risk-off flows bolsters the Japanese Yen against the Dollar.",
+    "suggestedAction": "SELL_RALLY",
+    "asOf": "2026-11-20T13:16:50.978Z"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 82,
+    "summaryCatalyst": "Gold is poised for steep weekly losses driven by mounting pricing for upcoming Fed hikes and forced institutional liquidations.",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-20T13:16:50.978Z"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Broad US Dollar strength driven by Fed rate hike bets sustains an upward trajectory against commodity currencies like the Canadian Dollar.",
+    "suggestedAction": "BUY_ON_DIP",
+    "asOf": "2026-11-20T13:16:50.978Z"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 15 articles as processed.
+Total run time: 1001.0s
+[2026/11/20 15:16:53,39] Finished 
+[2026/11/20 16:00:01,05] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-20T14:00:04.321Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (11 via dollar/Fed keywords), saved 3 new to Firestore.
+[2026/11/20 16:00:08,40] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-20T14:00:11.556Z] Running AI market analysis...
+Last Gemini call was 60 min ago (minimum 60). Skipping this run.
+[2026/11/20 16:00:13,67] Finished 
+[2026/11/20 17:00:01,06] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-20T15:00:05.655Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (9 via dollar/Fed keywords), saved 3 new to Firestore.
+[2026/11/20 17:00:11,33] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-20T15:00:14.792Z] Running AI market analysis...
+Gemini responded in 47.1s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BULLISH",
+    "confidenceScore": 62,
+    "summaryCatalyst": "The Euro is supported by cross-border capital inflows and hot German factory inflation, pushing EURUSD above 1.0950 despite French political risks. Technical resistance at the 100-day SMA warrants buying on shallow pullbacks.",
+    "suggestedAction": "BUY_ON_DIP",
+    "asOf": "2026-11-20T15:01:05.666Z"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BULLISH",
+    "confidenceScore": 74,
+    "summaryCatalyst": "The British Pound is rebounding strongly from yearly lows driven by better-than-expected UK retail sales figures. A retreating US Dollar further bolsters upside momentum for the pair.",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-20T15:01:05.666Z"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BEARISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "Safe-haven demand triggered by a global equity sell-off is driving broad Japanese Yen outperformance. Concurrently, downward pressure on US yields weighs heavily on USDJPY.",
+    "suggestedAction": "SELL_RALLY",
+    "asOf": "2026-11-20T15:01:05.666Z"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 68,
+    "summaryCatalyst": "Gold faces sustained headwinds from hawkish Federal Reserve rhetoric and institutional deleveraging. While long-term bull thesis remains intact, near-term selling pressure dominates.",
+    "suggestedAction": "SELL_RALLY",
+    "asOf": "2026-11-20T15:01:05.666Z"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BEARISH",
+    "confidenceScore": 58,
+    "summaryCatalyst": "The Canadian Dollar is gaining traction on the back of recovering crude oil prices, pushing USDCAD lower. However, hawkish Fed expectations continue to cap sharp downward extensions.",
+    "suggestedAction": "SELL_RALLY",
+    "asOf": "2026-11-20T15:01:05.666Z"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 15 articles as processed.
+Total run time: 52.5s
+[2026/11/20 17:01:07,35] Finished 
+[2026/11/20 18:00:01,07] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-20T16:00:03.880Z] Starting RSS news ingestion...
+Error fetching feed https://xml.fxstreet.com/news/forex-news/index.xml: Error: getaddrinfo ENOTFOUND xml.fxstreet.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'xml.fxstreet.com'
+}
+Error fetching feed https://www.investing.com/rss/news_25.rss: Error: getaddrinfo ENOTFOUND www.investing.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'www.investing.com'
+}
+Error fetching feed https://www.investing.com/rss/news_301.rss: Error: getaddrinfo ENOTFOUND www.investing.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'www.investing.com'
+}
+Ingestion complete. 0 relevant articles found (0 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/20 18:00:38,23] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-20T16:00:41.188Z] Running AI market analysis...
+Error during AI analysis: Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443
+    at callErrorFromStatus (F:\forex_trader\forex-signal-engine\node_modules\google-gax\node_modules\@grpc\grpc-js\src\call.ts:84:17)
+    at Object.onReceiveStatus (F:\forex_trader\forex-signal-engine\node_modules\google-gax\node_modules\@grpc\grpc-js\src\client.ts:612:51)
+    at Object.onReceiveStatus (F:\forex_trader\forex-signal-engine\node_modules\google-gax\node_modules\@grpc\grpc-js\src\client-interceptors.ts:424:48)
+    at <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\google-gax\node_modules\@grpc\grpc-js\src\resolving-call.ts:206:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+for call at
+    at ServiceClientImpl.makeServerStreamRequest (F:\forex_trader\forex-signal-engine\node_modules\google-gax\node_modules\@grpc\grpc-js\src\client.ts:595:42)
+    at ServiceClientImpl.<anonymous> (F:\forex_trader\forex-signal-engine\node_modules\google-gax\node_modules\@grpc\grpc-js\src\make-client.ts:189:15)
+    at <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google-cloud\firestore-api\src\v1\firestore_client.ts:358:25)
+    at <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\google-gax\src\streamingCalls\streamingApiCaller.ts:59:19)
+    at <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\google-gax\src\normalCalls\timeout.ts:54:13)
+    at Object.request (F:\forex_trader\forex-signal-engine\node_modules\google-gax\src\streamingCalls\streaming.ts:348:28)
+    at Timeout.makeRequest [as _onTimeout] (F:\forex_trader\forex-signal-engine\node_modules\retry-request\index.js:159:28)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+Caused by: Error
+    at <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google-cloud\firestore\dev\src\index.ts:1389:31)
+    at <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google-cloud\firestore\dev\src\telemetry\enabled-trace-util.ts:189:24)
+    at NoopContextManager.with (F:\forex_trader\forex-signal-engine\node_modules\@opentelemetry\api\src\context\NoopContextManager.ts:20:15)
+    at ContextAPI.with (F:\forex_trader\forex-signal-engine\node_modules\@opentelemetry\api\src\api\context.ts:68:42)
+    at NoopTracer.startActiveSpan (F:\forex_trader\forex-signal-engine\node_modules\@opentelemetry\api\src\trace\NoopTracer.ts:87:27)
+    at ProxyTracer.startActiveSpan (F:\forex_trader\forex-signal-engine\node_modules\@opentelemetry\api\src\trace\ProxyTracer.ts:51:20)
+    at EnabledTraceUtil.startActiveSpan (F:\forex_trader\forex-signal-engine\node_modules\@google-cloud\firestore\dev\src\telemetry\enabled-trace-util.ts:177:24)
+    at Firestore.getAll (F:\forex_trader\forex-signal-engine\node_modules\@google-cloud\firestore\dev\src\index.ts:1368:28)
+    at <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google-cloud\firestore\dev\src\reference\document-reference.ts:212:32)
+    at <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google-cloud\firestore\dev\src\telemetry\enabled-trace-util.ts:189:24) {
+  code: 14,
+  details: 'Name resolution failed for target dns:firestore.googleapis.com:443',
+  metadata: Metadata { internalRepr: Map(0) {}, options: {} }
+}
+[2026/11/20 18:01:37,10] Finished 
+[2026/11/20 19:00:01,13] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-20T17:00:04.182Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (8 via dollar/Fed keywords), saved 4 new to Firestore.
+[2026/11/20 19:00:08,11] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-20T17:00:11.055Z] Running AI market analysis...
+[Warning] Retryable error (503). Retrying in 4.0s (Attempt 1/4)...
+[Warning] Retryable error (503). Retrying in 8.0s (Attempt 2/4)...
+[Warning] Retryable error (503). Retrying in 16.0s (Attempt 3/4)...
+Daily Gemini budget reached (20/20). Stopping.
+[2026/11/20 19:01:13,21] Finished 
+[2026/11/20 20:00:01,12] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-20T18:00:04.027Z] Starting RSS news ingestion...
+Ingestion complete. 15 relevant articles found (8 via dollar/Fed keywords), saved 1 new to Firestore.
+[2026/11/20 20:00:08,39] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-20T18:00:11.286Z] Running AI market analysis...
+Daily Gemini budget used (20/20 for gemini-3.8-flash). Skipping until the quota resets (midnight Pacific).
+[2026/11/20 20:00:13,45] Finished 
