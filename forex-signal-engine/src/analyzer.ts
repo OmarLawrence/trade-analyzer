@@ -24,7 +24,7 @@ const VALID_ACTIONS = ['BUY', 'SELL', 'BUY_ON_DIP', 'SELL_RALLY', 'AWAIT_BREAKOU
 
 const BATCH_SIZE = 15; // controls token usage
 const CLAIM_TTL_MS = 10 * 60 * 1000; // how long a run "owns" its articles
-const MAX_SIGNAL_AGE_HOURS = Number(process.env.MAX_SIGNAL_AGE_HOURS ?? 12); // carried-forward signals expire after this
+const MAX_SIGNAL_AGE_HOURS = Number(process.env.MAX_SIGNAL_AGE_HOURS ?? 15); // carried-forward signals expire after this
 const HISTORY_TTL_DAYS = 90; // set a Firestore TTL policy on signal_history.expireAt
 
 interface Signal {
@@ -121,7 +121,7 @@ async function writeSignalsForMetaTrader(signals: Signal[]): Promise<boolean> {
 // These guards keep the scheduled task from burning the whole day's quota early.
 const DAILY_LIMIT = Number(process.env.GEMINI_DAILY_LIMIT ?? 20);
 // Set GEMINI_MIN_INTERVAL_MIN=0 to disable the interval check. --force / --now also bypass it.
-const MIN_INTERVAL_MIN = Number(process.env.GEMINI_MIN_INTERVAL_MIN ?? 90);
+const MIN_INTERVAL_MIN = Number(process.env.GEMINI_MIN_INTERVAL_MIN ?? 55);
 const USAGE_DOC = db.collection('system').doc('gemini_usage');
 
 class BudgetExhausted extends Error {}

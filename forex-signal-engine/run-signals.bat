@@ -2,19 +2,29 @@
 cd /d F:\forex_trader\forex-signal-engine
 if not exist logs mkdir logs
 
-echo [%date% %time%] Starting >> logs\run.log
-call npm run ingest >> logs\run.log 2>&1
-
-:: Extract current hour (handles leading spaces for single-digit hours like " 7")
+:: Capture the start time once, BEFORE the (slow) ingest step runs.
+:: %TIME% can start with a space for single-digit hours, so pad with a zero.
 set "HOUR=%TIME:~0,2%"
 set "HOUR=%HOUR: =0%"
+set "MIN=%TIME:~3,2%"
+set "HHMM=%HOUR%%MIN%"
 
-:: Only run Gemini analyzer between 09:00 and 21:00 SAST (13 runs at 60-min intervals)
-if "%HOUR%" GEQ "09" if "%HOUR%" LEQ "21" (
-    echo [%date% %time%] Active session window - running analyzer >> logs\run.log
+echo [%date% %time%] Starting at %HHMM% >> logs\run.log
+
+:: Ingestor: every run from 08:30 to 17:00 (runs are every 30 min, so 17:30 and later are skipped)
+if "%HHMM%" GEQ "0830" if "%HHMM%" LSS "1730" (
+    echo [%date% %time%] Running ingestor >> logs\run.log
+    call npm run ingest >> logs\run.log 2>&1
+) else (
+    echo [%date% %time%] Outside 08:30-17:00 - skipping ingestor >> logs\run.log
+)
+
+:: Analyzer: only on the hour (minute 00-29), from 09:00 to 18:00
+if "%MIN%" LSS "30" if "%HHMM%" GEQ "0900" if "%HHMM%" LSS "1830" (
+    echo [%date% %time%] Analyzer window - running analyzer >> logs\run.log
     call npm run analyze >> logs\run.log 2>&1
 ) else (
-    echo [%date% %time%] Outside 09:00-21:00 SAST window - skipping analyzer to save quota >> logs\run.log
+    echo [%date% %time%] Not an analyzer slot - skipping analyzer to save quota >> logs\run.log
 )
 
 echo [%date% %time%] Finished >> logs\run.log

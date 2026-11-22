@@ -3555,3 +3555,230 @@ Ingestion complete. 15 relevant articles found (8 via dollar/Fed keywords), save
 [2026-11-20T18:00:11.286Z] Running AI market analysis...
 Daily Gemini budget used (20/20 for gemini-3.8-flash). Skipping until the quota resets (midnight Pacific).
 [2026/11/20 20:00:13,45] Finished 
+[2026/11/20 21:00:01,98] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-20T19:00:20.524Z] Starting RSS news ingestion...
+Ingestion complete. 16 relevant articles found (8 via dollar/Fed keywords), saved 2 new to Firestore.
+[2026/11/20 21:00:24,57] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-20T19:00:29.391Z] Running AI market analysis...
+Daily Gemini budget used (20/20 for gemini-3.8-flash). Skipping until the quota resets (midnight Pacific).
+[2026/11/20 21:00:31,77] Finished 
+[2026/11/21 18:47:14,80] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-21T16:47:45.986Z] Starting RSS news ingestion...
+Error fetching feed https://xml.fxstreet.com/news/forex-news/index.xml: Error: getaddrinfo ENOTFOUND xml.fxstreet.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'xml.fxstreet.com'
+}
+Error fetching feed https://www.investing.com/rss/news_25.rss: Error: getaddrinfo ENOTFOUND www.investing.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'www.investing.com'
+}
+Error fetching feed https://www.investing.com/rss/news_301.rss: Error: getaddrinfo ENOTFOUND www.investing.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'www.investing.com'
+}
+Ingestion complete. 0 relevant articles found (0 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/21 18:47:46,13] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-21T16:47:51.234Z] Running AI market analysis...
+[Warning] Retryable error (ECONNRESET). Retrying in 4.0s (Attempt 1/4)...
+[Warning] Retryable error (503). Retrying in 8.0s (Attempt 2/4)...
+[Warning] Retryable error (503). Retrying in 16.0s (Attempt 3/4)...
+Error during AI analysis: ApiError: {"error":{"code":503,"message":"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","status":"UNAVAILABLE"}}
+    at throwErrorIfNotOK (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:1197:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\_api_client.ts:742:9)
+    at async Models.generateContentWithContinuation (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:108:24)
+    at async Models.Models.generateContent (F:\forex_trader\forex-signal-engine\node_modules\@google\genai\src\models.ts:208:14)
+    at async withRetry (F:\forex_trader\forex-signal-engine\src\analyzer.ts:226:14)
+    at async analyzeNewsAndGenerateSignals (F:\forex_trader\forex-signal-engine\src\analyzer.ts:399:22) {
+  status: 503
+}
+[2026/11/21 18:52:00,32] Finished 
+[2026/11/21 19:00:01,76] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-21T17:00:04.805Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (10 via dollar/Fed keywords), saved 6 new to Firestore.
+[2026/11/21 19:00:08,98] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-21T17:00:12.058Z] Running AI market analysis...
+Last Gemini call was 9 min ago (minimum 60). Skipping this run.
+[2026/11/21 19:00:13,71] Finished 
+[2026/11/21 20:00:00,75] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-21T18:00:03.754Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (10 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/21 20:00:08,48] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-21T18:00:11.651Z] Running AI market analysis...
+[Warning] Retryable error (UND_ERR_CONNECT_TIMEOUT). Retrying in 4.0s (Attempt 1/4)...
+[Warning] Retryable error (503). Retrying in 8.0s (Attempt 2/4)...
+[2026/11/22 13:17:25,10] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-22T11:17:49.771Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (9 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/22 13:17:53,72] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-22T11:17:58.547Z] Running AI market analysis...
+[Warning] Retryable error (503). Retrying in 4.0s (Attempt 1/4)...
+[2026/11/22 14:00:02,06] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-22T12:00:06.995Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (9 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/22 14:00:12,40] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-22T12:00:15.547Z] Running AI market analysis...
+Last Gemini call was 22 min ago (minimum 60). Skipping this run.
+[2026/11/22 14:00:16,56] Finished 
+[2026/11/22 15:00:01,01] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-22T13:00:04.010Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (9 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/22 15:00:07,31] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-22T13:00:10.165Z] Running AI market analysis...
+Gemini responded in 1178.9s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 72,
+    "summaryCatalyst": "Broad US Dollar strength driven by hawkish Federal Reserve expectations keeps the Euro on course for its third consecutive weekly loss despite temporary consolidations.",
+    "suggestedAction": "SELL_RALLY",
+    "asOf": "2026-11-22T13:19:53.162Z"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 75,
+    "summaryCatalyst": "Although retail sales provided temporary stabilization near 12-month lows, the Pound faces persistent downside pressure from softer inflation and decelerating wage growth.",
+    "suggestedAction": "SELL_RALLY",
+    "asOf": "2026-11-22T13:19:53.162Z"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 20,
+    "summaryCatalyst": "There is no clear asset-specific catalyst in the current news flow to determine a decisive directional bias for the Japanese Yen.",
+    "suggestedAction": "STAND_ASIDE",
+    "asOf": "2026-11-22T13:19:53.162Z"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Gold continues to extend its slide as robust US Dollar performance and persistent hawkish Federal Reserve expectations weigh heavily on bullion demand.",
+    "suggestedAction": "SELL_RALLY",
+    "asOf": "2026-11-22T13:19:53.162Z"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 76,
+    "summaryCatalyst": "The Canadian Dollar lingers near 19-month lows against a resilient US Dollar, with USD/CAD holding support along an ascending channel bottom near 1.4300.",
+    "suggestedAction": "BUY_ON_DIP",
+    "asOf": "2026-11-22T13:19:53.162Z"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 15 articles as processed.
+Total run time: 1184.2s
+[2026/11/22 15:19:54,42] Finished 
+[2026/11/22 16:00:01,05] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-22T14:00:03.939Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (9 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/22 16:00:07,54] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-22T14:00:10.397Z] Running AI market analysis...
+Last Gemini call was 60 min ago (minimum 60). Skipping this run.
+[2026/11/22 16:00:11,36] Finished 
+[2026/11/22 17:00:01,08] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-22T15:00:04.017Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (9 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/22 17:00:08,97] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-22T15:00:11.884Z] Running AI market analysis...
+No new articles to process.
+[2026/11/22 17:00:15,84] Finished 
+[2026/11/22 18:00:01,08] Starting 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-22T16:00:05.105Z] Starting RSS news ingestion...
+Ingestion complete. 17 relevant articles found (9 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/22 18:00:08,49] Active session window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-22T16:00:11.518Z] Running AI market analysis...
+No new articles to process.
+[2026/11/22 18:00:14,15] Finished 
