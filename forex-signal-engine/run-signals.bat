@@ -12,15 +12,15 @@ set "HHMM=%HOUR%%MIN%"
 echo [%date% %time%] Starting at %HHMM% >> logs\run.log
 
 :: Ingestor: every run from 08:30 to 17:00 (runs are every 30 min, so 17:30 and later are skipped)
-if "%HHMM%" GEQ "0830" if "%HHMM%" LSS "1730" (
+if "%HHMM%" GEQ "0830" if "%HHMM%" LSS "1830" (
     echo [%date% %time%] Running ingestor >> logs\run.log
     call npm run ingest >> logs\run.log 2>&1
 ) else (
-    echo [%date% %time%] Outside 08:30-17:00 - skipping ingestor >> logs\run.log
+    echo [%date% %time%] Outside 08:30-18:30 - skipping ingestor >> logs\run.log
 )
 
-:: Analyzer: only on the hour (minute 00-29), from 09:00 to 18:00
-if "%MIN%" LSS "30" if "%HHMM%" GEQ "0900" if "%HHMM%" LSS "1830" (
+:: Analyzer: only on the hour (minute 00-29), from 08:30 to 18:30
+if "%MIN%" LSS "30" if "%HHMM%" GEQ "0830" if "%HHMM%" LSS "1830" (
     echo [%date% %time%] Analyzer window - running analyzer >> logs\run.log
     call npm run analyze >> logs\run.log 2>&1
 ) else (

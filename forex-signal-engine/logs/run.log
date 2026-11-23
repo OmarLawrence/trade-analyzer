@@ -3782,3 +3782,423 @@ Ingestion complete. 17 relevant articles found (9 via dollar/Fed keywords), save
 [2026-11-22T16:00:11.518Z] Running AI market analysis...
 No new articles to process.
 [2026/11/22 18:00:14,15] Finished 
+[2026/11/23 12:00:00,70] Starting at 1200 
+[2026/11/23 12:00:00,72] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T10:00:07.960Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (13 via dollar/Fed keywords), saved 13 new to Firestore.
+[2026/11/23 12:00:11,51] Analyzer window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-23T10:00:15.774Z] Running AI market analysis (providers: groq -> gemini)...
+Calling Groq (openai/gpt-oss-120b)...
+Responded via groq:openai/gpt-oss-120b in 3.5s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Danske Bank notes Euro drifting lower; weak Eurozone data and hawkish USD support",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T10:00:21.900Z"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 60,
+    "summaryCatalyst": "UOB flags downside risk to 1.3010 and Euro gains versus GBP",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T10:00:21.900Z"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "NEUTRAL",
+    "confidenceScore": 30,
+    "summaryCatalyst": "Mixed signals: UOB sees Yen upside risk but forecast shows USDJPY positive start",
+    "suggestedAction": "STAND_ASIDE",
+    "asOf": "2026-11-23T10:00:21.900Z"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "Gold rebounds above $3,600 as USD retreats ahead of PMI data",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T10:00:21.900Z"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 25,
+    "summaryCatalyst": "No specific catalyst; USD strength mixed with retreat signals",
+    "suggestedAction": "STAND_ASIDE",
+    "asOf": "2026-11-23T10:00:21.900Z"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 15 articles as processed.
+Total run time: 6.6s
+[2026/11/23 12:00:22,43] Finished 
+[2026/11/23 12:30:00,65] Starting at 1230 
+[2026/11/23 12:30:00,65] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T10:30:03.650Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (12 via dollar/Fed keywords), saved 2 new to Firestore.
+[2026/11/23 12:30:06,88] Finished 
+[2026/11/23 13:00:00,63] Starting at 1300 
+[2026/11/23 13:00:00,63] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T11:00:03.671Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (12 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/23 13:00:07,75] Analyzer window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-23T11:00:10.676Z] Running AI market analysis (providers: groq -> gemini)...
+Calling Groq (openai/gpt-oss-120b)...
+Responded via groq:openai/gpt-oss-120b in 3.5s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Fed consecutive hikes and sticky inflation strengthen USD, pressuring EUR.",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T11:00:17.005Z"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "Fed hikes plus soft UK Flash PMIs pull GBP lower.",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T11:00:17.005Z"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Fed hikes boost USD against JPY.",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T11:00:17.005Z"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Higher USD from Fed hikes pressures gold lower.",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T11:00:17.005Z"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Fed hikes strengthen USD versus CAD.",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T11:00:17.005Z"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 6.7s
+[2026/11/23 13:00:17,42] Finished 
+[2026/11/23 13:30:00,63] Starting at 1330 
+[2026/11/23 13:30:00,63] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T11:30:03.678Z] Starting RSS news ingestion...
+Ingestion complete. 20 relevant articles found (14 via dollar/Fed keywords), saved 5 new to Firestore.
+[2026/11/23 13:30:07,96] Finished 
+[2026/11/23 14:00:00,65] Starting at 1400 
+[2026/11/23 14:00:00,65] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T12:00:04.862Z] Starting RSS news ingestion...
+Ingestion complete. 20 relevant articles found (13 via dollar/Fed keywords), saved 4 new to Firestore.
+[2026/11/23 14:00:08,56] Analyzer window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-23T12:00:13.046Z] Running AI market analysis (providers: groq -> gemini)...
+Calling Groq (openai/gpt-oss-120b)...
+Responded via groq:openai/gpt-oss-120b in 3.2s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 55,
+    "summaryCatalyst": "Mixed signals: USD strength from DXY bounce and SNB gains versus Euro weigh against resilient Euro data and potential Fed pivot, net slight bearish bias.",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T12:00:18.635Z"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 60,
+    "summaryCatalyst": "USD strength and disappointing UK business activity data pressure GBP, creating bearish bias.",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T12:00:18.635Z"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Yen weakening as BoJ tightening scope considered and USD strength from DXY bounce, leading to bullish USDJPY.",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T12:00:18.635Z"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BULLISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "Gold jumps >2% as Fed hike bets fade and risk-off sentiment, indicating strong bullish move.",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T12:00:18.635Z"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "USD strength reflected in DXY rise and bounce supports bullish USDCAD.",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T12:00:18.635Z"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 9 articles as processed.
+Total run time: 6.0s
+[2026/11/23 14:00:19,13] Finished 
+[2026/11/23 14:30:00,60] Starting at 1430 
+[2026/11/23 14:30:00,60] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T12:30:03.590Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (11 via dollar/Fed keywords), saved 2 new to Firestore.
+[2026/11/23 14:30:07,88] Finished 
+[2026/11/23 15:00:00,68] Starting at 1500 
+[2026/11/23 15:00:00,68] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T13:00:03.755Z] Starting RSS news ingestion...
+Ingestion complete. 19 relevant articles found (11 via dollar/Fed keywords), saved 2 new to Firestore.
+[2026/11/23 15:00:07,97] Analyzer window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-23T13:00:10.996Z] Running AI market analysis (providers: groq -> gemini)...
+Calling Groq (openai/gpt-oss-120b)...
+Responded via groq:openai/gpt-oss-120b in 2.9s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 80,
+    "summaryCatalyst": "Political risks and ECB repricing weigh on Euro, compounded by US Dollar strength",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T13:00:16.499Z"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "NEUTRAL",
+    "confidenceScore": 30,
+    "summaryCatalyst": "Mixed signals: BoE path tempers downside risks but US Dollar strength adds pressure",
+    "suggestedAction": "STAND_ASIDE",
+    "asOf": "2026-11-23T13:00:16.499Z"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "US Dollar erases losses, supporting USDJPY",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T13:00:16.499Z"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "US Dollar strength pressures gold prices",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T13:00:16.499Z"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "US Dollar erases losses, pushing CAD to 19‑month lows",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T13:00:16.499Z"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 4 articles as processed.
+Total run time: 5.9s
+[2026/11/23 15:00:16,92] Finished 
+[2026/11/23 15:30:00,64] Starting at 1530 
+[2026/11/23 15:30:00,64] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T13:30:03.659Z] Starting RSS news ingestion...
+Ingestion complete. 18 relevant articles found (11 via dollar/Fed keywords), saved 2 new to Firestore.
+[2026/11/23 15:30:06,89] Finished 
+[2026/11/23 16:00:00,67] Starting at 1600 
+[2026/11/23 16:00:00,68] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T14:00:03.807Z] Starting RSS news ingestion...
+Ingestion complete. 21 relevant articles found (13 via dollar/Fed keywords), saved 3 new to Firestore.
+[2026/11/23 16:00:07,85] Analyzer window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-23T14:00:10.980Z] Running AI market analysis (providers: groq -> gemini)...
+Calling Groq (openai/gpt-oss-120b)...
+Responded via groq:openai/gpt-oss-120b in 2.5s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "Multiple reports highlight firm US dollar data and Fed rate‑hike expectations, indicating continued USD strength against the euro.",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T14:00:17.371Z"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "Strong US dollar fundamentals and Fed outlook weigh on the pound, keeping GBPUSD bearish.",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T14:00:17.371Z"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "US dollar macro support from solid data and Fed rate‑hike bets lifts USDJPY higher.",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T14:00:17.371Z"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "US dollar strength pressures gold prices, outweighing modest upside from gold‑miner activity.",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T14:00:17.371Z"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 85,
+    "summaryCatalyst": "Fed‑rate‑hike expectations and firm US data boost the dollar versus the Canadian loonie.",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T14:00:17.371Z"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 5 articles as processed.
+Total run time: 6.9s
+[2026/11/23 16:00:17,92] Finished 
+[2026/11/23 16:30:00,63] Starting at 1630 
+[2026/11/23 16:30:00,63] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T14:30:03.875Z] Starting RSS news ingestion...
+Ingestion complete. 20 relevant articles found (13 via dollar/Fed keywords), saved 2 new to Firestore.
+[2026/11/23 16:30:07,86] Finished 
+[2026/11/23 17:00:00,66] Starting at 1700 
+[2026/11/23 17:00:00,68] Running ingestor 
+
+> forex-signal-engine@1.0.0 ingest
+> tsx src/ingestor.ts
+
+[2026-11-23T15:00:05.216Z] Starting RSS news ingestion...
+Ingestion complete. 20 relevant articles found (12 via dollar/Fed keywords), saved 0 new to Firestore.
+[2026/11/23 17:00:09,27] Analyzer window - running analyzer 
+
+> forex-signal-engine@1.0.0 analyze
+> tsx src/analyzer.ts
+
+[2026-11-23T15:00:12.538Z] Running AI market analysis (providers: groq -> gemini)...
+Calling Groq (openai/gpt-oss-120b)...
+Responded via groq:openai/gpt-oss-120b in 2.5s
+Generated Signals: [
+  {
+    "pair": "EURUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Piper Sandler bullish on Dollar General signals USD strength, weighing on EURUSD despite unrelated Euro‑forint note",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T15:00:18.887Z"
+  },
+  {
+    "pair": "GBPUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "USD strength from Dollar General outlook pressures GBPUSD lower",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T15:00:18.887Z"
+  },
+  {
+    "pair": "USDJPY",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "Dollar General bullish outlook boosts USD, supporting a higher USDJPY",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T15:00:18.887Z"
+  },
+  {
+    "pair": "XAUUSD",
+    "bias": "BEARISH",
+    "confidenceScore": 65,
+    "summaryCatalyst": "Stronger USD from Dollar General outlook tends to depress gold prices in USD terms",
+    "suggestedAction": "SELL",
+    "asOf": "2026-11-23T15:00:18.887Z"
+  },
+  {
+    "pair": "USDCAD",
+    "bias": "BULLISH",
+    "confidenceScore": 70,
+    "summaryCatalyst": "USD upside from Dollar General expectations lifts USDCAD",
+    "suggestedAction": "BUY",
+    "asOf": "2026-11-23T15:00:18.887Z"
+  }
+]
+Wrote MetaTrader signal file: C:\Users\DOS Remote\AppData\Roaming\MetaQuotes\Terminal\Common\Files\news_bias.txt
+Done. Marked 2 articles as processed.
+Total run time: 6.8s
+[2026/11/23 17:00:19,35] Finished 
+[2026/11/23 17:30:00,70] Starting at 1730 
+[2026/11/23 17:30:00,71] Outside 08:30-17:00 - skipping ingestor 
+[2026/11/23 17:30:00,72] Finished 
