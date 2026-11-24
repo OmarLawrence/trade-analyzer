@@ -111,6 +111,8 @@ async function fetchAndStoreNews() {
   );
 }
 
+console.log(`NEW_ARTICLES: ${newArticlesCount}`);
+
 fetchAndStoreNews()
   .then(() => process.exit(0))
   .catch((err) => {

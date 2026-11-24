@@ -397,8 +397,10 @@ async function callGroq(userPrompt: string): Promise<unknown[]> {
 
     if (!res.ok) {
       const bodyText = await res.text().catch(() => '');
-      const err: ApiErrorLike = new Error(`Groq HTTP ${res.status}: ${bodyText.slice(0, 300)}`);
-      err.status = res.status;
+      const err = Object.assign(
+        new Error(`Groq HTTP ${res.status}: ${bodyText.slice(0, 300)}`),
+        { status: res.status },
+      );
       const wait = retryAfterMs(err, res.headers);
       if (wait) err.message = `${err.message} (retry in ${(wait / 1000).toFixed(1)}s)`;
       throw err;
