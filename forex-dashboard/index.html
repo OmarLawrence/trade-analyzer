@@ -5,9 +5,173 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>forex-dashboard</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: 16px;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+      button {
+        padding: 6px 12px;
+        border-radius: 6px;
+        border: 1px solid #334155;
+        background: #1e293b;
+        color: #f8fafc;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #334155;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        background: #1e293b;
+      }
+      th, td {
+        padding: 8px 10px;
+        border: 1px solid #334155;
+        text-align: left;
+      }
+      th {
+        background: #0f172a;
+      }
+      .pnl-pos { color: #4ade80; font-weight: 600; }
+      .pnl-neg { color: #f87171; font-weight: 600; }
+      .bias-box {
+        margin-bottom: 16px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #1e293b;
+        border: 1px solid #334155;
+        font-size: 13px;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <section id="trade-log-container" aria-label="Trade Log">
+      <div class="toolbar">
+        <strong>MT5 Trade Log (trade_log.csv)</strong>
+        <button id="refresh-log-btn" type="button">Refresh Log</button>
+        <label>
+          <input id="toggle-news-bias" type="checkbox" />
+          Show news_bias.txt (optional)
+        </label>
+        <span id="log-status"></span>
+      </div>
+      <div id="news-bias-panel" class="bias-box" style="display: none;"></div>
+      <div style="overflow-x: auto;">
+        <table id="trade-log-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      const statusEl = document.getElementById('log-status');
+      const theadEl = document.querySelector('#trade-log-table thead');
+      const tbodyEl = document.querySelector('#trade-log-table tbody');
+      const refreshBtn = document.getElementById('refresh-log-btn');
+      const toggleBias = document.getElementById('toggle-news-bias');
+      const biasPanel = document.getElementById('news-bias-panel');
+
+      function parseCsvLine(line) {
+        const result = [];
+        let current = '';
+        let inQuotes = false;
+        for (let i = 0; i < line.length; i++) {
+          const ch = line[i];
+          if (ch === '"') {
+            inQuotes = !inQuotes;
+          } else if (ch === ',' && !inQuotes) {
+            result.push(current.trim());
+            current = '';
+          } else {
+            current += ch;
+          }
+        }
+        result.push(current.trim());
+        return result;
+      }
+
+      async function loadTradeLog() {
+        statusEl.textContent = 'Loading trade_log.csv...';
+        try {
+          const res = await fetch(`./trade_log.csv?t=${Date.now()}`, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const text = await res.text();
+          const lines = text.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+
+          if (lines.length === 0) {
+            theadEl.innerHTML = '';
+            tbodyEl.innerHTML = '<tr><td>trade_log.csv is empty.</td></tr>';
+            statusEl.textContent = '0 rows';
+            return;
+          }
+
+          const headers = parseCsvLine(lines[0]);
+          const pnlIdx = headers.indexOf('pnl');
+          const rows = lines.slice(1).reverse().map(parseCsvLine);
+
+          theadEl.innerHTML = `<tr>${headers.map((h) => `<th>${h}</th>`).join('')}</tr>`;
+          tbodyEl.innerHTML = rows
+            .map((cols) => {
+              const cells = cols.map((val, idx) => {
+                let cls = '';
+                if (idx === pnlIdx) {
+                  const num = parseFloat(val);
+                  if (!Number.isNaN(num)) {
+                    cls = num > 0 ? 'pnl-pos' : num < 0 ? 'pnl-neg' : '';
+                  }
+                }
+                return `<td class="${cls}">${val}</td>`;
+              });
+              return `<tr>${cells.join('')}</tr>`;
+            })
+            .join('');
+
+          statusEl.textContent = `${rows.length} entries loaded`;
+        } catch (err) {
+          statusEl.textContent = `Could not load /trade_log.csv (${err.message})`;
+        }
+      }
+
+      async function loadNewsBias() {
+        if (!toggleBias.checked) {
+          biasPanel.style.display = 'none';
+          return;
+        }
+        biasPanel.style.display = 'block';
+        try {
+          const res = await fetch(`./news_bias.txt?t=${Date.now()}`, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const text = await res.text();
+          biasPanel.innerHTML = `<strong>news_bias.txt</strong><pre style="margin:6px 0 0;white-space:pre-wrap;">${text}</pre>`;
+        } catch {
+          biasPanel.innerHTML = '<strong>news_bias.txt</strong><div>Not available or not synced.</div>';
+        }
+      }
+
+      refreshBtn.addEventListener('click', () => {
+        loadTradeLog();
+        loadNewsBias();
+      });
+      toggleBias.addEventListener('change', loadNewsBias);
+
+      loadTradeLog();
+    </script>
   </body>
 </html>
